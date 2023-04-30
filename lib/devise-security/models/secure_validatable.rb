@@ -70,6 +70,7 @@ module Devise
               record.password_complexity_validator.is_a?(Class) ? record.password_complexity_validator : record.password_complexity_validator.classify.constantize,
               { attributes: :password }.merge(record.password_complexity)
             )
+            binding.pry
           end
 
           # don't allow use same password
